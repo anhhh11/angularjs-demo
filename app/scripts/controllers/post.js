@@ -1,16 +1,13 @@
 'use strict';
-angular.module('workspaceApp').controller('PostCtrl', function ($scope,Post) {
+app.controller('PostCtrl', function ($scope,$location,Post) {
 
- $scope.posts = Post.all;
-$scope.post = {url: 'http://', 'title': ''};
- 
-$scope.submitPost = function () {
-Post.create($scope.post).then(function () {
-$scope.post = {url: 'http://', 'title': ''};
+	$scope.posts = Post.all;
+	$scope.post = {url: 'http://'};
+
+
+	$scope.deletePost = function (postId) {
+		Post.delete(postId);
+	};
+
 });
-};
- 
-$scope.deletePost = function (postId) {
-Post.delete(postId);
-};});
 
