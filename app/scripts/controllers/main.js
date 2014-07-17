@@ -5,6 +5,6 @@ angular.module('workspaceApp')
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
-      'Karma'
+      'Karmas'
     ];
   });
